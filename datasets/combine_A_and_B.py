@@ -14,8 +14,10 @@ args = parser.parse_args()
 for arg in vars(args):
     print('[%s] = ' % arg, getattr(args, arg))
 
-splits = os.listdir(args.fold_A)
+# splits = os.listdir(args.fold_A)
+# print('splits:',splits)
 
+splits=['']
 for sp in splits:
     img_fold_A = os.path.join(args.fold_A, sp)
     img_fold_B = os.path.join(args.fold_B, sp)
